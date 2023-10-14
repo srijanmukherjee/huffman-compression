@@ -15,3 +15,6 @@ init:
 	@if [ ! -d $(BUILD_DIR) ]; then \
 		mkdir $(BUILD_DIR); \
 	fi
+
+clean:
+	rm -rf $(BUILD_DIR)
