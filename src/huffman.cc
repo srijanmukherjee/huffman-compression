@@ -5,7 +5,7 @@
 #include <string>
 #include <queue>
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 4096
 
 std::shared_ptr<huffman::HuffmanTree::Node> huffman::HuffmanTree::BuildTree(
     const std::map<uint8_t, uint32_t> &frequencies)
