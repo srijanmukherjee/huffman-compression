@@ -15,7 +15,7 @@ class NodeCompare
 {
 public:
     bool operator() (huffman::HuffmanTree::NodePtr a, huffman::HuffmanTree::NodePtr b) {
-        return a->frequency < b->frequency;
+        return a->frequency > b->frequency;
     }
 };
 
