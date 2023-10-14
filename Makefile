@@ -8,7 +8,7 @@ ifdef $(DEBUG)
 CXXFLAGS+= -ggdb
 endif
 
-$(PROG_NAME): $(SRC_DIR)/main.cc
+$(PROG_NAME): $(SRC_DIR)/main.cc $(SRC_DIR)/huffman.cc
 	$(CXX) $(CXXCLAGS) -o $(BUILD_DIR)/$@ $^
 
 init:
