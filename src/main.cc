@@ -1,6 +1,7 @@
 #include <cstring>
 #include <exception>
 #include <fstream>
+#include <ios>
 #include <iostream>
 #include <string>
 
@@ -31,6 +32,11 @@ int main(int argc, const char *argv[]) {
 
     destFile.close();
     srcFile.close();
+
+    std::ifstream compressedSrc("compressed.bin", std::ios::binary | std::ios::in);
+    std::ofstream uncompressedDest("uncompressed.txt", std::ios::binary | std::ios::out);
+    huffman::Decompressor decompressor(compressedSrc);
+    decompressor.WriteToFile(uncompressedDest);
 
     return 0;
 }
