@@ -9,7 +9,7 @@ CXXFLAGS+= -ggdb
 endif
 
 $(PROG_NAME): $(SRC_DIR)/main.cc $(SRC_DIR)/huffman.cc
-	$(CXX) $(CXXCLAGS) -o $(BUILD_DIR)/$@ $^
+	$(CXX) $(CXXCLAGS) -o $(BUILD_DIR)/$@ $^ -ggdb
 
 init:
 	@if [ ! -d $(BUILD_DIR) ]; then \
